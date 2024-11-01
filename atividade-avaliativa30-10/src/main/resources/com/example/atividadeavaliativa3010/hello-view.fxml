@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.atividadeavaliativa3010.HelloController">
+
+  <MenuBar>
+    <Menu text="Funcionalidades">
+      <MenuItem text="Caixa" onAction="#OnCaixaActionButton"/>
+      <MenuItem text="Verificador de preço" onAction="#OnVerificadorDePrecoActionButton"/>
+    </Menu>
+    <Menu text="Outros">
+      <MenuItem text="Sobre" onAction="#OnSobreActionButton"/>
+      <MenuItem text="Sair" onAction="#OnSairActionButton"/>
+    </Menu>
+  </MenuBar>
+
+  <ImageView fitWidth="250.0" fitHeight="250.0" pickOnBounds="true" preserveRatio="true">
+    <Image url="/Mercado-bom-preço.png"/>
+  </ImageView>
+
+  <Label fx:id="versionText">
+    Versão 1.0.0
+  </Label>
+  <Button text="Caixa" onAction="#OnCaixaActionButton" stylesheets="@style.css"/>
+  <Button text="Verificador de preço" onAction="#OnVerificadorDePrecoActionButton" stylesheets="@style.css"/>
+  <Button text="Sobre o sistema" onAction="#OnSobreActionButton" stylesheets="@style.css"/>
+  <Button text="Sair" onAction="#OnSairActionButton" stylesheets="@style.css"/>
+</VBox>

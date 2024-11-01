@@ -1,0 +1,21 @@
+.button {
+    -fx-background-color: #FF5733; /* Cor de fundo do botão */
+    -fx-text-fill: white; /* Cor do texto */
+    -fx-font-size: 16px; /* Tamanho da fonte */
+    -fx-pref-width: 180px; /* Largura preferencial */
+    -fx-pref-height: 40px; /* Altura preferencial */
+    -fx-padding: 10px; /* Espaçamento interno */
+}
+.button:pressed {
+    -fx-background-color: #D94F29; /* Cor de fundo mais escura ao pressionar */
+}
+
+.text-field {
+    -fx-border-color: gray; /* Cor da borda padrão */
+    -fx-border-width: 2px; /* Largura da borda */
+    -fx-padding: 3px; /* Espaçamento interno */
+}
+
+.text-field:focused {
+    -fx-border-color: #FF5733; /* Cor da borda quando o campo é selecionado */
+}

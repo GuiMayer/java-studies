@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.atividadeavaliativa3010.SobreController">
+
+  <Label style="-fx-font-weight: bold; -fx-font-size: 32">Caixa de supermercado</Label>
+
+  <ImageView fitWidth="250.0" fitHeight="250.0" pickOnBounds="true" preserveRatio="true">
+    <Image url="/Mercado-bom-preço.png"/>
+  </ImageView>
+
+  <Label fx:id="versionText">
+    Versão 1.0.0
+  </Label>
+
+  <Label style="-fx-font-weight: bold;">Desenvolvedor</Label>
+  <Label>Guilherme Mayer dos Santos</Label>
+
+  <Label style="-fx-font-weight: bold;">E-mail de contato</Label>
+  <Label>gui.mayer.ds@gmail.com</Label>
+
+</VBox>
