@@ -16,7 +16,12 @@
   <MenuBar>
     <Menu text="Funcionalidades">
       <MenuItem text="Caixa" onAction="#OnCaixaActionButton"/>
+      <MenuItem text="Produtos cadastrados" onAction="#OnProdutosCadastradosActionButton"/>
       <MenuItem text="Verificador de preço" onAction="#OnVerificadorDePrecoActionButton"/>
+    </Menu>
+    <Menu text="Produtos">
+      <MenuItem text="Cadastrar produto" onAction="#OnCadastrarProdutoActionButton"/>
+      <MenuItem text="Editar produto" onAction="#OnEditarProdutoActionButton"/>
     </Menu>
     <Menu text="Outros">
       <MenuItem text="Sobre" onAction="#OnSobreActionButton"/>

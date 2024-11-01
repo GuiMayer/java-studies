@@ -48,4 +48,17 @@ public class HelloController {
             onConfirm.run(); // Chama a função passada
         }
     }
+
+    @FXML
+    public void OnProdutosCadastradosActionButton(ActionEvent actionEvent) throws IOException {
+        new ProdutosCadastradosStage();
+    }
+
+    @FXML
+    public void OnCadastrarProdutoActionButton(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void OnEditarProdutoActionButton(ActionEvent actionEvent) {
+    }
 }

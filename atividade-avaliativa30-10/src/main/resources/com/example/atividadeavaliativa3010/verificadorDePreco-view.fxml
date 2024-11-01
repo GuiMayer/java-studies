@@ -22,12 +22,15 @@
   <Label style="-fx-font-weight: bold; -fx-font-size: 32">Verificador de Preço</Label>
 
   <Label>Código de Produto</Label>
-  <TextField stylesheets="@style.css" prefWidth="200" minWidth="200" maxWidth="200"/>
+  <TextField stylesheets="@style.css" prefWidth="200" minWidth="200" maxWidth="200"
+            fx:id="codigoProdutoTextField" onKeyPressed="#onCodigoProdutoKeyPressed"/>
 
-  <Label>Descrição:</Label>
-  <Label style="-fx-font-weight: bold;">Desodorante - R$ 11.90</Label>
+  <Label>Nome do produto:</Label>
+  <Label style="-fx-font-weight: bold;"
+         fx:id="nomeProdutoLabel">Desodorante</Label>
 
   <Label>Valor:</Label>
-  <Label style="-fx-font-weight: bold;">Desodorante - R$ 11.90</Label>
+  <Label style="-fx-font-weight: bold;"
+         fx:id="precoProdutoLabel">R$ 11.90</Label>
 
 </VBox>

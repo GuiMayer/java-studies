@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.example.atividadeavaliativa3010.ProdutosCadastradosController">
+
+  <padding>
+    <Insets right="20.0" left="20.0" bottom="20.0"/>
+  </padding>
+  <Label style="-fx-font-weight: bold; -fx-font-size: 32">Produtos Cadastrados</Label>
+
+  <Label>Lista de produtos</Label>
+
+  <TextArea fx:id="produtosTextArea" editable="false" wrapText="true" VBox.vgrow="ALWAYS"/>
+
+  <Button text="Atualizar" onAction="#OnAtualizarActionButton" stylesheets="@style.css"/>
+
+</VBox>

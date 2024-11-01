@@ -1,4 +1,4 @@
-package com.example.atividadeavaliativa3010.Models;
+package Models;
 
 import java.util.List;
 

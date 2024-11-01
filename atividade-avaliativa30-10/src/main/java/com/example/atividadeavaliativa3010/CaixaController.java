@@ -17,4 +17,8 @@ public class CaixaController {
     @FXML
     public void OnExcluirActionButton(ActionEvent actionEvent) {
     }
+
+    @FXML
+    public void OnEmitirNotaFiscalActionButton(ActionEvent actionEvent) {
+    }
 }

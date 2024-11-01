@@ -1,6 +1,5 @@
-package com.example.atividadeavaliativa3010.Models;
+package Models;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -11,16 +10,12 @@ public class Produto implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 
-    @JsonProperty("id")
     private int id;
 
-    @JsonProperty("nome")
     private String nome;
 
-    @JsonProperty("quantidade")
     private int quantidade;
 
-    @JsonProperty("preco")
     private double preco;
 
     public Produto(String nome, int quantidade, double preco) {
