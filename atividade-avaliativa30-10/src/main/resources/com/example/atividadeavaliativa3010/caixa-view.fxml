@@ -36,7 +36,7 @@
 
   <Button onAction="#OnExcluirActionButton" stylesheets="@style.css" text="Excluir" />
 
-  <HBox alignment="TOP_CENTER" spacing="20.0">
+  <HBox alignment="TOP_CENTER" spacing="40.0">
     <padding>
       <Insets bottom="10.0" left="10.0" />
     </padding>

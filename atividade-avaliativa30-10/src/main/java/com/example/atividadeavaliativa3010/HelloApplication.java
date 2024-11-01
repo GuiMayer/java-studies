@@ -22,19 +22,9 @@ public class HelloApplication extends Application {
         stage.getIcons().add(new Image("file:src/main/resources/icon_bom_preco.png"));
         stage.setScene(scene);
 
-        Mercado mercado = new Mercado(Arrays.asList(
-                new Produto(1, "Arroz", 50, 3.79), // kg
-                new Produto(2, "Feijão Preto", 30, 4.29), // kg
-                new Produto(3, "Açúcar", 25, 2.49), // kg
-                new Produto(4, "Sal", 15, 1.99), // kg
-                new Produto(5, "Óleo de Soja", 20, 7.89), // 900ml
-                new Produto(6, "Leite Integral", 40, 3.29), // 1L
-                new Produto(7, "Queijo Mussarela", 10, 24.90), // kg
-                new Produto(8, "Frango Congelado", 15, 8.49), // kg
-                new Produto(9, "Notebook", 5, 2999.99), // unidade
-                new Produto(10, "Smartphone", 8, 1499.99) // unidade
-        ));
+        Mercado mercado = new Mercado();
 
+        System.out.println(mercado);
         stage.show();
     }
 

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LoaderBin implements Loader {
-    private static final String FILE_NAME = "save.bin"; // Nome do arquivo binário
+    public static final String FILE_NAME = "save.bin"; // Nome do arquivo binário
 
     public void save(List<Produto> produtos) {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_NAME))) {

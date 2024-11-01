@@ -30,9 +30,9 @@ public class Pedido {
     }
     public void removeProduto(int id, int quantidade)
     {
-        for (Produto produto : listaDeCompras) {
-            if (produto.getId() == id) {
-                produto.removerQuantidade(quantidade);
+        for (Produto listaDeCompra : listaDeCompras) {
+            if (listaDeCompra.getId() == id) {
+                listaDeCompra.removerQuantidade(quantidade);
             }
         }
     }

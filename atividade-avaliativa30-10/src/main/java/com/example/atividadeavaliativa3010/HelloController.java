@@ -55,10 +55,15 @@ public class HelloController {
     }
 
     @FXML
-    public void OnCadastrarProdutoActionButton(ActionEvent actionEvent) {
+    public void OnCadastrarProdutoActionButton(ActionEvent actionEvent) throws IOException {
+        new CadastrarProdutoStage();
     }
 
     @FXML
     public void OnEditarProdutoActionButton(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    public void OnExcluirProdutoActionButton(ActionEvent actionEvent) {
     }
 }
