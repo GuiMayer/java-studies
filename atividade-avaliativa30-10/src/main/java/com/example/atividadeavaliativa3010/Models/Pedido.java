@@ -2,38 +2,48 @@ package com.example.atividadeavaliativa3010.Models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Pedido {
-    private List<Produto> listaDeCompras  = new ArrayList<>();
+    private Stack<Produto> listaDeCompras  = new Stack<>();
     
-    public List<Produto> getListaDeCompras() {
+    public Stack<Produto> getListaDeCompras() {
         return listaDeCompras;
     }
 
-    public void setListaDeCompras(List<Produto> listaDeCompras) {
+    public void setListaDeCompras(Stack<Produto> listaDeCompras) {
         this.listaDeCompras = listaDeCompras;
     }
 
     public void addProduto(Produto produto) {
         this.listaDeCompras.add(produto);
     }
-    public void addProduto(List<Produto> produtos) {
+    public void addProduto(Stack<Produto> produtos) {
         this.listaDeCompras.addAll(produtos);
     }
-    public void removeProduto(int id)
+    public void removeProduto(int codigo)
     {
         for (int i = 0; i < listaDeCompras.size(); i++) {
-            if (listaDeCompras.get(i).getId() == id) {
+            if (listaDeCompras.get(i).getId() == codigo) {
                 listaDeCompras.remove(i);
             }
         }
     }
-    public void removeProduto(int id, int quantidade)
+    public void adicionarQuantidade(int codigo, int quantidade)
     {
-        for (Produto listaDeCompra : listaDeCompras) {
-            if (listaDeCompra.getId() == id) {
-                listaDeCompra.removerQuantidade(quantidade);
+        getProduto(codigo).adicionarQuantidade(quantidade);
+    }
+    public void removerQuantidade(int codigo, int quantidade)
+    {
+        getProduto(codigo).removerQuantidade(quantidade);
+    }
+    public Produto getProduto(int id)
+    {
+        for (Produto produto : listaDeCompras) {
+            if (produto.getId() == id) {
+                return produto;
             }
         }
+        return null;
     }
 }

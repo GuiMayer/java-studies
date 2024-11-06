@@ -24,7 +24,7 @@ public class HelloApplication extends Application {
 
         Mercado mercado = new Mercado();
 
-        System.out.println(mercado);
+        //System.out.println(mercado);
         stage.show();
     }
 

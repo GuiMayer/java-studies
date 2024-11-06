@@ -17,7 +17,7 @@
     </padding>
     <VBox>
       <Label>Código do produto</Label>
-      <TextField stylesheets="@style.css" />
+      <TextField stylesheets="@style.css" fx:id="codigoProdutoTextField"/>
       <Label fx:id="feedbackCodigoProdutoLabel"/>
     </VBox>
   </HBox>
@@ -39,9 +39,5 @@
     </VBox>
   </HBox>
 
-  <Button onAction="#OnCadastrarProdutoActionButton" stylesheets="@style.css" text="Cadastrar produto" />
-
-
-
-
+  <Button onAction="#OnEditarProdutoActionButton" stylesheets="@style.css" text="Editar produto" />
 </VBox>

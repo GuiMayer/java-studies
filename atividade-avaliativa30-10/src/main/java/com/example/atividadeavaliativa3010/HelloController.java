@@ -60,10 +60,12 @@ public class HelloController {
     }
 
     @FXML
-    public void OnEditarProdutoActionButton(ActionEvent actionEvent) {
+    public void OnEditarProdutoActionButton(ActionEvent actionEvent) throws IOException {
+        new EditarProdutoStage();
     }
 
     @FXML
-    public void OnExcluirProdutoActionButton(ActionEvent actionEvent) {
+    public void OnExcluirProdutoActionButton(ActionEvent actionEvent) throws IOException {
+        new ExcluirProdutoStage();
     }
 }

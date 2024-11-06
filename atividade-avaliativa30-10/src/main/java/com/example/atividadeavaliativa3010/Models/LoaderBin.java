@@ -6,6 +6,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.atividadeavaliativa3010.Models.Utils.showErrorDialog;
+
 public class LoaderBin implements Loader {
     public static final String PRODUTOS_SAVE_FILE_NAME = "produtosSave.bin"; // Nome do arquivo binário
 
@@ -38,16 +40,5 @@ public class LoaderBin implements Loader {
 
     public List<Produto> load() {
         return load(PRODUTOS_SAVE_FILE_NAME);
-    }
-
-    public static void showErrorDialog(String message) {
-        // Cria um novo alerta do tipo erro
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Erro"); // Define o título do diálogo
-        alert.setHeaderText(null); // Não define um cabeçalho
-        alert.setContentText(message); // Define a mensagem de erro
-
-        // Exibe o diálogo e aguarda a resposta do usuário
-        alert.showAndWait();
     }
 }

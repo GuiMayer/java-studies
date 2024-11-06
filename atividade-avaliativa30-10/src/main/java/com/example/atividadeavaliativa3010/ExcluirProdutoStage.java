@@ -7,12 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class EditarProdutoStage extends Stage {
+public class ExcluirProdutoStage extends Stage {
 
-    public EditarProdutoStage() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("editarProduto-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 460, 300);
-        this.setTitle("Editar Produto");
+    public ExcluirProdutoStage() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("excluirProduto-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 420, 220);
+        this.setTitle("Ecluir Produto");
         this.getIcons().add(new Image("file:src/main/resources/icon_bom_preco.png"));
         this.setScene(scene);
         this.show();

@@ -7,7 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 
-public class EditarProdutoController {
+public class ExcluirProdutoController {
 
 
     @FXML
@@ -21,6 +21,6 @@ public class EditarProdutoController {
     }
 
     @FXML
-    public void OnEditarProdutoActionButton(ActionEvent actionEvent) {
+    public void OnExcluirProdutoActionButton(ActionEvent actionEvent) {
     }
 }

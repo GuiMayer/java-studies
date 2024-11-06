@@ -3,6 +3,7 @@ package com.example.atividadeavaliativa3010.Models;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class Mercado {
     public static Mercado Instance;
@@ -24,6 +25,7 @@ public class Mercado {
         addProdutoAll(produtos);
     }
     private List<Produto> produtos = new ArrayList<Produto>();
+    private List<Pedido> pedidos = new Stack<>();
 
     public List<Produto> getProdutos() {
         return produtos;
@@ -76,19 +78,47 @@ public class Mercado {
             }
         }
     }
-    public void removeProduto(int id)
+    public void removeProduto(int codigo)
     {
         for (int i = 0; i < produtos.size(); i++) {
-            if (produtos.get(i).getId() == id) {
+            if (produtos.get(i).getId() == codigo) {
                 produtos.remove(i);
             }
         }
     }
-    public String toString() {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (Produto produto : produtos) {
-            stringBuilder.append(produto+"\n");
-        }
-        return stringBuilder.toString();
+    public boolean existe(int codigo)
+    {
+        return getProduto(codigo) != null;
     }
+    public void adicionarQuantidade(int codigo, int quantidade)
+    {
+        if (existe(codigo)) getProduto(codigo).adicionarQuantidade(quantidade);
+    }
+    public void removerQuantidade(int codigo, int quantidade)
+    {
+        if (existe(codigo)) getProduto(codigo).removerQuantidade(quantidade);
+    }
+    public String toString() {
+        if (!produtos.isEmpty()) {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (Produto produto : produtos) {
+                stringBuilder.append(produto+"\n");
+            }
+            return stringBuilder.toString();
+        }
+        return "";
+    }
+
+
+    // --------------------------------------------------------
+    //               PEDIDOS
+
+    public List<Pedido> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<Pedido> pedidos) {
+        this.pedidos = pedidos;
+    }
+
 }
