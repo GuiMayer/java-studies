@@ -17,15 +17,15 @@
     </padding>
     <VBox>
       <Label>Nome do produto</Label>
-      <TextField stylesheets="@style.css" />
+      <TextField stylesheets="@style.css" fx:id="nomeProdutoTextField"/>
     </VBox>
     <VBox>
       <Label>Preço do produto</Label>
-      <TextField stylesheets="@style.css" />
+      <TextField stylesheets="@style.css" fx:id="precoProdutoTextField"/>
     </VBox>
     <VBox>
       <Label>Quantidade do produto</Label>
-      <TextField stylesheets="@style.css" />
+      <TextField stylesheets="@style.css" fx:id="quantidadeProdutoTextField"/>
     </VBox>
   </HBox>
 

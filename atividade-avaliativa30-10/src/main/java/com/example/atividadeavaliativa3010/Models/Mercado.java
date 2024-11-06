@@ -46,6 +46,18 @@ public class Mercado {
         SaveProdutos();
     }
 
+    public void editarProduto(int codigo, Produto produto) {
+        Produto produtoExistente = getProduto(codigo);
+
+        if (produtoExistente != null) {
+            produtoExistente.setNome(produto.getNome());
+            produtoExistente.setPreco(produto.getPreco());
+            produtoExistente.setQuantidade(produto.getQuantidade());
+
+            SaveProdutos();
+        }
+    }
+
     private void SaveProdutos()
     {
         Loader loader = new LoaderBin();
