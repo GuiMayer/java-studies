@@ -17,7 +17,7 @@
     </padding>
     <VBox>
       <Label>Código do produto</Label>
-      <TextField stylesheets="@style.css" fx:id="codigoProdutoTextField"/>
+      <TextField stylesheets="@style.css" fx:id="codigoProdutoTextField" onKeyTyped="#onCodigoProdutoKeyPressed"/>
       <Label fx:id="feedbackCodigoProdutoLabel"/>
     </VBox>
   </HBox>

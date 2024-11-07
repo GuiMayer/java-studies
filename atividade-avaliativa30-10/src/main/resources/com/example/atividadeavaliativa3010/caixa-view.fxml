@@ -26,7 +26,7 @@
     </VBox>
   </HBox>
 
-  <Label fx:id="produtoLabel">Desodorante - R$20.00</Label>
+  <Label fx:id="produtoLabel"/>
 
   <Button onAction="#OnAdicionarAListaActionButton" stylesheets="@style.css" text="Adicionar à lista" />
 

@@ -58,6 +58,15 @@ public class Mercado {
         }
     }
 
+    public void deletarProduto(int codigo) {
+        Produto produto = getProduto(codigo);
+
+        if (produto != null) {
+            produtos.remove(produto);
+            SaveProdutos();
+        }
+    }
+
     private void SaveProdutos()
     {
         Loader loader = new LoaderBin();
