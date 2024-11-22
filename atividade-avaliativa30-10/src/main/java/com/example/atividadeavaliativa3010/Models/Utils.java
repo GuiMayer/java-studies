@@ -40,7 +40,7 @@ public class Utils {
     public static void showSuccsessDialog(String message) {
         // Cria um novo alerta do tipo erro
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Erro"); // Define o título do diálogo
+        alert.setTitle("Sucesso"); // Define o título do diálogo
         alert.setHeaderText(null); // Não define um cabeçalho
         alert.setContentText(message); // Define a mensagem de erro
 

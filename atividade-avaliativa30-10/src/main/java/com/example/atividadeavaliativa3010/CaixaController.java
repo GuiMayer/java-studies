@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 
+import java.util.Objects;
 import java.util.Stack;
 
 public class CaixaController {
@@ -28,6 +29,8 @@ public class CaixaController {
     @FXML
     public Label produtoLabel;
     private Pedido pedidoAtual;
+    private double total = 0.0;
+    private double troco = -1;
 
     @FXML
     public void initialize()
@@ -54,6 +57,7 @@ public class CaixaController {
 
         atualizarListaDeProdutosTextArea();
         atualizarSomaDeProdutosTextArea();
+        AtualizarTroco();
     }
 
     @FXML
@@ -63,11 +67,9 @@ public class CaixaController {
 
         atualizarListaDeProdutosTextArea();
         atualizarSomaDeProdutosTextArea();
+        AtualizarTroco();
     }
 
-    @FXML
-    public void OnEmitirNotaFiscalActionButton(ActionEvent actionEvent) {
-    }
 
     @FXML
     public void onCodigoProdutoKeyPressed(KeyEvent event) {
@@ -102,6 +104,50 @@ public class CaixaController {
         for (Produto produto : pedidoAtual.getListaDeCompras()) {
             soma += produto.getQuantidade() * produto.getPreco();
         }
-        totalLabel.setText("R$"+soma);
+        total = soma;
+        totalLabel.setText("R$"+String.format("%.2f", total));
+    }
+
+    @FXML
+    public void onValorPagoKeyPressed(KeyEvent keyEvent) {
+        AtualizarTroco();
+
+    }
+
+    @FXML
+    public void OnEmitirNotaFiscalActionButton(ActionEvent actionEvent) {
+        if(listaDeProdutosTextArea.getText().isEmpty()) Utils.showErrorDialog("Nenhum produto cadastrado!");
+        else {
+            if (troco < 0.0) Utils.showErrorDialog("Compra não autorizada, valor insuficiente!");
+            else {
+                Utils.showSuccsessDialog("Nota fiscal emitida.");
+                LimparCampos();
+            }
+        }
+    }
+
+    private void AtualizarTroco()
+    {
+        double valorPago = 0.0;
+        try {
+            if (Objects.equals(valorPagoTextField.getText(), "")) valorPago = 0.0;
+            else valorPago = Double.parseDouble(valorPagoTextField.getText().replace(",", "."));
+        } catch (Exception e) {
+            Utils.showErrorDialog(e.getMessage());
+        }
+        troco = valorPago-total;
+        trocoLabel.setText("R$"+String.format("%.2f", troco));
+    }
+
+    private void LimparCampos()
+    {
+        codigoTextField.clear();
+        quantidadeTextField.clear();
+        valorPagoTextField.clear();
+        listaDeProdutosTextArea.clear();
+
+        produtoLabel.setText("");
+        trocoLabel.setText("R$0,00");
+        totalLabel.setText("R$0,00");
     }
 }

@@ -42,15 +42,15 @@
     </padding>
     <VBox>
       <Label>Total:</Label>
-      <Label style="-fx-font-weight: bold" fx:id="totalLabel">R$19.95</Label>
+      <Label style="-fx-font-weight: bold" fx:id="totalLabel">R$0,00</Label>
     </VBox>
     <VBox>
       <Label>Valor pago:</Label>
-      <TextField style="-fx-pref-width: 70" stylesheets="@style.css" fx:id="valorPagoTextField"/>
+      <TextField style="-fx-pref-width: 70" stylesheets="@style.css" fx:id="valorPagoTextField" onKeyTyped="#onValorPagoKeyPressed"/>
     </VBox>
     <VBox>
       <Label>Troco:</Label>
-      <Label style="-fx-font-weight: bold" fx:id="trocoLabel">R$19.95</Label>
+      <Label style="-fx-font-weight: bold" fx:id="trocoLabel">R$0,00</Label>
     </VBox>
   </HBox>
 

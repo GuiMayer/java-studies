@@ -23,14 +23,14 @@
 
   <Label>Código de Produto</Label>
   <TextField stylesheets="@style.css" prefWidth="200" minWidth="200" maxWidth="200"
-            fx:id="codigoProdutoTextField" onKeyPressed="#onCodigoProdutoKeyPressed"/>
+            fx:id="codigoProdutoTextField" onKeyTyped="#onCodigoProdutoKeyPressed"/>
 
   <Label>Nome do produto:</Label>
   <Label style="-fx-font-weight: bold;"
-         fx:id="nomeProdutoLabel">Desodorante</Label>
+         fx:id="nomeProdutoLabel"/>
 
   <Label>Valor:</Label>
   <Label style="-fx-font-weight: bold;"
-         fx:id="precoProdutoLabel">R$ 11.90</Label>
+         fx:id="precoProdutoLabel">R$0,00</Label>
 
 </VBox>
